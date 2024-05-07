@@ -13,7 +13,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", cors(), (_req, res) => {
-  res.send("<h1>Hello world! This is the home page.</h1>");
+  res.send(
+    "<h1>Welcome to the Chitter REST API! Feel free to check out the 'users' and 'posts' endpoints.</h1>"
+  );
 });
 
 app.use("/users", usersController);
